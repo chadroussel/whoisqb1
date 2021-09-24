@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="peyton.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Peyton Manning</title>
+  </head>
+  <body style="background-color: black">
+    <div class="container-fluid">
+      <div id="header" class="row">
+        <div class="col-md-9 col-sm-9 col-xs-9">
+          <img class="responsive" src="qbheader.png" alt="" />
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+          <button id="home" class="btn btn-dark" onclick="return home()">
+            HOME
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <img class="responsive" id="main2" src="peyton-sb.jpg" alt="" />
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <img class="responsive" id="stats" src="peyton-stats.jpg" alt="" />
+
+          <div class="text-center col-md-12 col-sm-12 col-xs-12">
+            <button
+              class="text-center btn btn-light dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Year/Stats
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a class="dropdown-item" onclick="fetchData()">2012</a>
+              </li>
+              <li>
+                <a class="dropdown-item" onclick="fetchData2()"
+                  >2013* (Best Season)</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" onclick="fetchData3()">2014</a>
+              </li>
+              <li><a class="dropdown-item" onclick="fetchData4()">2015</a></li>
+              <li>
+                <a class="dropdown-item" onclick="fetchData5()"
+                  >Career Total (to date)</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <div
+              class="invisible"
+              id="tdowns"
+              style="
+                flex-direction: table;
+                color: rgb(243, 84, 21);
+                justify-content: center;
+              "
+            >
+              <span style="color: rgb(255, 255, 255)">Season: </span
+              ><span id="season"> </span>
+              <span style="color: rgb(255, 255, 255)"
+                >Total Passing Yards: </span
+              ><span id="yds"> </span>
+              <span style="color: rgb(255, 255, 255)">Touchdowns: </span
+              ><span id="tds"> </span>
+              <span style="color: rgb(255, 255, 255)">Interceptions: </span
+              ><span id="ints"> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center pollBtn" id="pbd">
+      <button class="btn btn-light" onclick="poll()">Vote Here</button>
+    </div>
+
+    <div id="footer">
+      <img class="trust" src="qbfooter.png" />
+      In God We Trust. ©2021
+    </div>
+    <script src="peyton.js"></script>
+  </body>
+</html>
